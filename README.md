@@ -6,5 +6,13 @@
 
 # Obtained Results:
 - Parameters: 9,154
-- reached 99.14% validation accuracy in 19th epoch
+- reached 99.17% validation accuracy in 15th epoch
+
+# Approach
+## Model Summary
 ![Model summary](./S6/model_summary.png)
+## Model Architecture
+- Used Batch norm after every convolution layer
+- Used Maxpooling at the end of 1st block 
+- Used Average pooling of 6x6 in the last block
+- Used 5 convolutional layers with 3x3 kernel size in total
