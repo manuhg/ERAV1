@@ -10,7 +10,7 @@
 
 # Approach
 ## Model Summary
-![Model summary](./S6/model_summary.png)
+![Model summary](./model_summary.png)
 ## Model Architecture
 - Used Batch norm after every convolution layer
 - Used Maxpooling at the end of 1st block
