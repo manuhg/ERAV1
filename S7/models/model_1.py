@@ -1,6 +1,16 @@
 import torch.nn as nn
 import torch.nn.functional as F
 
+# Target:
+#   Set up a basic working model that reaches 99% train and test accuracy in 20 epochs
+# Results:
+#   Parameters: 509,946
+#   Best train accuracy: 99.11
+#   Best test accuracy: 99:03
+# Analysis:
+#   Heavy model and converges very slowly.
+#   The model seems like a good starting point. Converges slowly, but converges to 99%.
+#   The model does not seem to have a lot of over fitting.
 
 class Net(nn.Module):
     def __init__(self):
