@@ -6,7 +6,7 @@ import torch.nn.functional as F
 # Results:
 #   Parameters: 511,354
 #   Best train accuracy: 99.83
-#   Best test accuracy: 99:50
+#   Best test accuracy: 99.50
 # Analysis:
 #   Model now converges much faster. The model is able to reach 99% (train and test) accuracy in 4 epochs.
 #   Train accuracy plateau's at ~99.8% after 17th epoch.

@@ -6,7 +6,7 @@ import torch.nn.functional as F
 # Results:
 #   Parameters: 509,946
 #   Best train accuracy: 99.11
-#   Best test accuracy: 99:03
+#   Best test accuracy: 99.03
 # Analysis:
 #   Heavy model and converges very slowly.
 #   The model seems like a good starting point. Converges slowly, but converges to 99%.
