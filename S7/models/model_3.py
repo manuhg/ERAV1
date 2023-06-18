@@ -2,20 +2,20 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
+#  Observations:
+#    6, 9, 8 have smaller circles
+#    1 and 7 have similar shape
+#    0 2 3 4 5 don't have re-usable similarities
+#    -> so 7 or 8 channels should be enough to capture the basic patterns
 # Target:
-#   Make the model converge faster.
+#   Reduce the model parameters to less than 8k
 # Results:
-#   Parameters: 7,882
-#   Best train accuracy: 98.4
-#   Best test accuracy: 98.46
+#   Parameters: 7,924
+#   Best train accuracy: 99.25
+#   Best test accuracy: 99.99
 # Analysis:
-#   reduced LR step size from 15 to 10, this gave some goodness but the overall accuracy is still not enough
-#   Model now has less than 8k params due to replacing of 1 large conv layer with adaptive pooling and reducing num channels
-#   Observations:
-#       6, 9, 8 have smaller circles
-#       1 and 7 have similar shape
-#       0 2 3 4 5 don't have re-usable similarities
-#       -> so 7 or 8 channels should be enough to capture the basic patterns
+#   The model still managed to converge fast after param reduction.
+#   The model starts to overfit from 10th epoch.
 
 class Net(nn.Module):
     def __init__(self):
