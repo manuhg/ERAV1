@@ -2,16 +2,14 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 # Target:
-#   Make the model converge faster.
+#   Set up a basic working model that reaches 99% test accuracy in 15 epochs
 # Results:
 #   Parameters: 511,354
-#   Best train accuracy: 99.83
-#   Best test accuracy: 99.50
+#   Best train accuracy: 100
+#   Best test accuracy: 99.43
 # Analysis:
-#   Model now converges much faster. The model is able to reach 99% (train and test) accuracy in 4 epochs.
-#   Train accuracy plateau's at ~99.8% after 17th epoch.
-#   Test accuracy stabilises above 99.4% after 17th epoch.
-#   Model needs to converge faster i.e the accuracy target is being hit but needs to be done in fewer epochs
+#   The model converged quickly.
+#   The model has overfit completely on the train dataset
 
 class Net(nn.Module):
     def __init__(self):
